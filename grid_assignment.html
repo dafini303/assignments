@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "HEADER HEADER HEADER"
+    "NAV ARTICLE ARTICLE"
+    "ADS ARTICLE ARTICLE"
+    "FOOTER FOOTER FOOTER"
+    ;
+    gap: 10px;
+        }
+        .container div {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+
+         .HEADER {
+            grid-area: HEADER;
+        }
+
+        .NAV {
+            grid-area: NAV;
+        }
+
+        .ARTICLE {
+            grid-area: ARTICLE;
+        }
+
+        .ADS {
+            grid-area: ADS;
+        }
+        
+        .FOOTER {
+            grid-area: FOOTER;
+        }
+.container div {
+    background-color: lightblue;
+    padding: 20px;
+}
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            HEADER
+        </div>
+        <div class="HEADER">NAV</div>
+        <div class="ARTICLE">ARTICLE</div>
+         <div class="ADS">ADS</div>
+          <div class="ARTICLE">ARTICLE</div>
+         <div class="FOOTER">FOOTER</div>
+
+</body>
+</html>
