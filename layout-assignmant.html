@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout with Transitions</title>
+
+    <style>
+        body {
+            display: grid;
+            border: 1px solid rgb(40, 87, 243);
+
+            grid-template-areas:
+                'header header header'
+                'nav article ads'
+                'footer footer footer';
+
+            grid-template-rows: 70px 1fr 70px;
+            grid-template-columns: 100px 1fr 50px;
+
+            height: 100vh;
+            gap: 5px;
+        }
+
+        #pageheader {
+            grid-area: header;
+        }
+
+        #maincontent {
+            grid-area: article;
+        }
+
+        #navbar {
+            grid-area: nav;
+        }
+
+        #siteads {
+            grid-area: ads;
+        }
+
+        #pagefooter {
+            grid-area: footer;
+        }
+
+        header, footer, article, nav, div {
+            color: brown;
+            background-color: chartreuse;
+            border: 1px solid crimson;
+            transition: all 0.5s ease;
+        }
+
+        header:hover,
+        footer:hover,
+        article:hover,
+        nav:hover,
+        div:hover {
+            background-color: orange;
+            transform: scale(1.03);
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="pageheader">Header</header>
+
+    <article id="maincontent">
+        Main content of the page
+    </article>
+
+    <nav id="navbar">Navigation</nav>
+
+    <div id="siteads">Ads</div>
+
+    <footer id="pagefooter">
+        Footer of the page
+    </footer>
+
+</body>
+</html>
