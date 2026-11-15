@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a function addNumbers(a, b) that accepts two numbers and returns their sum.
+function addNumbers(a, b) {
+    return a + b;
+}
+
+let result = addNumbers(10, 20);
+console.log(result);
+
+
+//Write a function checkEvenOdd(num) that checks whether a given number is even or odd.
+function EvenOdd(num) {
+    if (num % 2 == 0) {
+        return "Even Number";
+    }
+    else {
+        return "Odd Number";
+    }
+}
+
+//Write a function findLargest(a, b, c) that accepts three numbers and returns the largest number.
+
+console.log(EvenOdd(7));
+
+function Largest(a, b, c) {
+    if (a >= b && a >= c) {
+        return a;
+    }
+    else if (b >= a && b >= c) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
+console.log(Largest(10, 25, 15));
+
+
+
+function factorial(num) {
+    let fact = 1;
+
+    for (let i = 1; i <= num; i++) {
+        fact = fact * i;
+    }
+
+    return fact;
+}
+
+console.log(factorial(5));
+
+
+
+
+function reverseString(str) {
+    let reverse = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverse = reverse + str[i];
+    }
+
+    return reverse;
+}
+
+console.log(reverseString("hello"));
+
+
+
+function countVowels(str) {
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i].toLowerCase();
+
+        if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+            count++;
+        }
+    }
+ 
+    return count;
+}
+
+console.log(countVowels("Hello World"));
+        </script>
+</body>
+</html>
